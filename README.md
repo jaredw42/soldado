@@ -7,6 +7,7 @@ Soldado is a simple Python module for playing a text-based adventure game simila
 # Requirements
 The game itself only requires the `toml` library for parsing configuration and resource files.
 It is available using `pip` or `conda` package managers.
+
 `python -m pip install toml`
 
 ### Python Version
