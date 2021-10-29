@@ -9,6 +9,8 @@ The game itself only requires the `toml` library for parsing configuration and r
 It is available using `pip` or `conda` package managers.
 `python -m pip install toml`
 
+### Python Version
+Soldado requires Python3 and has been tested as far back as Python 3.6. 
 ### Testing
 For unit testing, `pytest` is used.
 ### Schema Validation 
@@ -17,14 +19,14 @@ For unit testing, `pytest` is used.
 
 
 # Playing
-## starting the game
+## Starting the game
 To start a new game, run the `play_game` python script. The configuration files will load automatically.
 
 `python ./src/play_game.py`
 
 Instructions currently are only available at the start of the game.
 
-## playing the game
+## Playing the game
 After starting and the instruction prompt, the user will be asked for an action.
 Available player actions are `["movements", "sensors", "launch_fighter", "self_destruct"]`.
 
