@@ -1,0 +1,27 @@
+### LOCATIONS
+[[locations]]
+[locations.destination_planet]
+name = "destination_planet"
+formal_name = "Earth"
+danger = 0 # probability of fatal event at end of turn
+phrase_key = "destination_planet"
+alliances = ["human"]
+rules = ["enemies_forbidden", "ship_spawn_forbidden", "destination_planet"]
+
+[[locations]]
+[locations.non_hazardous]
+name = "planet"
+formal_name = "Kobol"
+danger = 0.1
+phrase_key = "neutral_planet"
+alliances = []
+rules = []
+[[locations]]
+[locations.hazardous]
+name = "severe_hazard"
+formal_name = "Black Hole"
+danger = 0.67
+phrase_key = "severe_hazard"
+rules = ["enemies_forbidden", "ship_spawn_forbidden", "hazardous"]
+
+

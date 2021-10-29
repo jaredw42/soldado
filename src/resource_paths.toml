@@ -1,0 +1,9 @@
+[phrases]
+phrases_english = "./resources/phrases_english.toml"
+
+[configs]
+config = "./resources/default_config.toml"
+
+[game_objects]
+ships = "./resources/ships.toml"
+locations = "./resources/locations.toml"

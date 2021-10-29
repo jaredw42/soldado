@@ -1,0 +1,18 @@
+[config]
+required_objects = []
+[config.game_board]
+x_len = 5
+y_len = 5
+
+[config.start_conditions]
+[config.start_conditions.locations]
+destination_planet = 1
+hazardous = 2
+non_hazardous = 0
+
+[config.start_conditions.ships]
+enemy_capital = 2
+friendly_objective = 1
+player = 1
+
+

@@ -1,0 +1,39 @@
+[[ships]]
+[ships.player]
+name = "player"
+formal_name = "Battlestar Galactica"
+nicknames =  ["Galactica", "Rust Bucket", "Big G"]
+hit_points = 100
+actions  = ["movements", "sensors", "launch_fighter", "self_destruct"]
+alliances = ["human"]
+phrase_key = "player"
+movement_speed= 2
+scan_radius = 2
+rules = []
+
+[[ships]]
+[ships.friendly_objective]
+name = "friendly_objective"
+formal_name = "Colonial One"
+nicknames = ["Colonial One"]
+hit_points = 30
+actions = ["movements", "sensors"]
+alliances = ["human"]
+phrase_key = "friendly_objective"
+movement_speed = 2
+scan_radius = 2
+rules = []
+
+
+[[ships]]
+[ships.enemy_capital]
+name = "enemy_capital"
+formal_name = "Cylon Base Star"
+nicknames = ["Cylon Base", "Toaster HQ"]
+hit_points = 60
+actions  = ["movements", "sensors", "launch_fighter"]
+alliances = ["cylon"]
+phrase_key = "enemy_capital"
+movement_speed = 2
+scan_radius = 4
+rules = []

@@ -1,0 +1,94 @@
+[[phrases]]
+# phrases_english.toml
+# Contains a list of phrases to display for a given context.  
+# Almost all phrases are stored in lists and one is chosen at random.
+# Some phrases, such as self-destruct inputs contain only one entry to avoid player confusion.
+[phrases.discovery]
+# these will play the first time an object is is in the same sector as the player
+enemy_capital = ["DRADIS CONTACT - {} on intercept course!!"]
+friendly_objective = ["{} are we ever glad to see you! The President sends her thanks!"]
+destination_planet = ["At long last, you find the legendary planet {}"]
+severe_hazard = ["DANGER - we are near the {}!"]
+player = ["You found {} in this sector. (that's good, it's you!)"] # This message should not print 
+
+[phrases.detection]
+#these play any time the object shows up during a sensor sweep.
+enemy_capital = ["Long-range sensors detect EM radiation consistent with a {}",
+                "Comm chatter matching a {} detected nearby."]
+friendly_objective = ["Long-range sensors detect a transponder signal matching {}."]
+destination_planet = ["Long-range sensors detect a planet with water in the habitable zone of a nearby star! Could it be the legendary planet {}?"]
+severe_hazard = ['Detecting supermassive object nearby, possible {}. We should avoid this area.']
+player = ["{} detected. (Thats good, it's you.)"] # This message should not print. 
+pytest_scan_target = ["Target: {} detected."]
+pytest_ship = ["Target: {} detected."]
+[phrases.special]
+new_game_prompt = ["Would you like to start a new game?"]
+new_game_start = ["Starting game..."]
+game_ready = ["Welcome aboard the {}, Commander! Would you like a briefing on the current situation?"]
+instructions = [
+"""The situation is grim, Commander, but some times you have to roll a hard six. 
+During the recent Cylon attack, Colonial One was forced to jump away and her current whereabouts are unknown.
+This area of space is quite hazardous, and there are still many enemies patrolling this area.
+We must find Colonial One and rendevouz with her as soon as possible before continuing our journey to Earth.
+AVAILABLE ACTIONS: {}
+"""]
+
+# this could immediately end the game, let's not make it confusing to players by changing it gets displayed.
+self_destruct_confirm = "000-DESTRUCT-0"
+self_destruct_abort = "ABORT"
+[phrases.user_input]
+
+#if the string is exactly this, the user meant yes/no.
+exact_affirmatives = ["y", "y.", "yes", "yes."]
+exact_negatives = ["n", "n.", "no", "no."]
+
+# If the exact match fails, the user's input is split and checked for these words
+sentance_contains_affirmatives = ["yes", "yes ", "yes.", "yes,"]
+sentance_contains_negatives = ["no","no ", "no. ", "no,"]
+
+
+[phrases.user_prompt]
+default_prompt=["What are your orders, Commander?"]
+movement_direction_query = ["{} is in location: {}.\n Which direction would you like to go?\n"]
+movement_speed_query = ["How many spaces would you like to move? (Max: {})"]
+self_destruct_confirmation = ["CONFIRM SELF-DESTRUCT COMMAND.\nENTER SELF-DESTRUCT PASS PHRASE '{}' TO CONFIRM\n ENTER '{}' TO ABORT"]
+
+[phrases.command_reply]
+command_parse_fail = ["I'm sorry, Commander, I didn't understand the {} command.",
+                        "Negative, sir, we can't {}."]
+command_parse_success = ["Roger, sir.  Executing {}.",
+                        "{}. By your command."]
+direction_parse_fail = [
+"""Could not understand a direction from command {}.
+Valid movement commands are direction name, abbreviation or integer direction.
+(i.e. "southeast" "se" "3")"""
+                        ]
+direction_parse_success = ["Understood direction {}."]
+
+speed_parse_fail = ["Movement speed of {} is invalid."]
+speed_parse_success = ["Understood movement speed of {}."]
+self_destruct_confirm = ["SELF DESTRUCT SEQUENCE CONFIRMED.  DETONATING. \n ...Lords of Kobol, hear our prayer..."]
+self_destruct_abort = ["SELF DESTRUCT SEQUENCE ABORTED.\n"]
+self_destruct_fail = ["ONLY SELF DESTRUCT SUBCOMMANDS ALLOWED AT THIS TIME."]
+[phrases.action_reply]
+action_success = ["Report: {} performed action {} successfully."] # formal_name, action
+action_failure = ["Report: {} could not perform {}."]
+movement_success = ["Report: FTL jump successful. {} now in location {}."]
+movement_failure = ["Report: FTL jump failed. Movement of {} at speed {} not valid from {}."]
+self_destruct_start = ["!!!! WARNING !!!!\n SELF DESTRUCT SEQUENCE INITIATED."]
+
+[phrases.action_keywords]
+movements = ["move", "movement", "movements", "jump the ship", "ftl jump"]
+sensors = ["scan", "sensors", "DRADIS"]
+self_destruct = ["self destruct", "quit"]
+no_action = ["nothing"]
+launch_fighter = ["viper", "vipers", "fighter", "fighters", "apollo", "starbuck"]
+
+
+[phrases.game_over]
+game_over_victory = ["""Finally free of the Cylons and reunited, the humans decide to settle on the planet Earth and begin civilization anew.
+Congradulations, Commander.  You did it!"""]
+game_over_player_destroyed = ["""Without the {} to defend them, Colonial One and the rest of the fleet are easy pickings for the Cylons.
+Humanity's candle is now extiguished. GAME OVER."""]
+game_over_objective_destroyed = ["""Without the President and the Quorum, the humans' hopes quickly begin to dwindle.  Before long, there is only anarchy and the fleet quickly splinters.
+Without the support of the fleet, the Battlestar Galactica eventually runs out of fuel.  Her frozen hulk glides silently through the cosmos for all eternity. GAME OVER."""]
